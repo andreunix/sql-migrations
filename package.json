@@ -1,6 +1,6 @@
 {
     "name": "@andreunix/sql-migrations",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "Sistema de migrations SQL estilo Laravel para PostgreSQL em TypeScript",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

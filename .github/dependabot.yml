@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # Monitorar dependências npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    versioning-strategy: increase
+    reviewers:
+      - "k1r4"
+    groups:
+      # Agrupar atualizações de patch em um único PR
+      patch-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+      # Agrupar atualizações de desenvolvimento
+      dev-dependencies:
+        patterns:
+          - "@types/*"
+          - "typescript"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Monitorar GitHub Actions (se houver)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
