@@ -1,0 +1,58 @@
+{
+    "name": "@andreunix/sql-migrations",
+    "version": "1.0.0",
+    "description": "Sistema de migrations SQL estilo Laravel para PostgreSQL em TypeScript",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/index.js",
+    "type": "commonjs",
+    "bin": {
+        "sql-migrate": "./bin/sql-migrate",
+        "migrate": "./bin/sql-migrate",
+        "mpg": "./bin/sql-migrate"
+    },
+    "scripts": {
+        "build": "bun build:tsc",
+        "build:tsc": "tsc",
+        "dev": "tsc --watch",
+        "clean": "rm -rf dist",
+        "rebuild": "bun run clean && bun run build",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepublishOnly": "bun run build",
+        "link:local": "bun link",
+        "migrate": "node bin/sql-migrate"
+    },
+    "keywords": [
+        "migrations",
+        "sql",
+        "postgresql",
+        "database",
+        "laravel",
+        "typescript",
+        "postgres"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "pg": "^8.17.1"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/node": "^20.17.10",
+        "@types/pg": "^8.16.0",
+        "typescript": "^5.7.3"
+    },
+    "peerDependencies": {
+        "pg": "^8.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "files": [
+        "dist",
+        "bin",
+        "templates",
+        "README.md"
+    ]
+}
