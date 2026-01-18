@@ -12,8 +12,6 @@ updates:
       prefix: "chore"
       include: "scope"
     versioning-strategy: increase
-    reviewers:
-      - "k1r4"
     groups:
       # Agrupar atualizações de patch em um único PR
       patch-updates:
