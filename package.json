@@ -34,7 +34,7 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "dotenv": "^17.2.3",
+        "dotenv": "^17.2.4",
         "pg": "^8.17.1"
     },
     "devDependencies": {
